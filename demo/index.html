@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <title>konamize demo page !</title>
+</head>
+<body>
+  <h1>konamize</h1>
+  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="konamize.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('body').konamize({
+        callback: function() { alert('callback'); }
+      });
+    });
+  </script>
+</body>
+</html>
