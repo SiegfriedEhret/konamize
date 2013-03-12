@@ -1,3 +1,7 @@
+###
+  Made by Siegfried Ehret
+  Licenced under the WTFPL
+###
 $.fn.konamize = (settings) ->
   container = $(this)
   defaults =
@@ -11,10 +15,8 @@ $.fn.konamize = (settings) ->
   timeOutFunction = () ->
     progress = -1
     clearTimeout timeOut
-    console.log 'cleared !'
 
   container.on 'keydown', (e) ->
-    console.log e.keyCode
     if (!timeOut)
       timeOut = setTimeout(timeOutFunction, options.timer)
     ++progress

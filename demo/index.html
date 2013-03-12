@@ -5,6 +5,36 @@
 </head>
 <body>
   <h1>konamize</h1>
+  <h2>intro</h2>
+  Easy jQuery konami code integration ! The function resets when the user type a bad key or when the timer reach its limit.
+
+  <h2>how to</h2>
+  <ul>
+    <li>include jquery</li>
+    <li>include konamize</li>
+  </ul>
+
+  <p>Then, call the stuff:</p>
+  <pre>
+    $(function() {
+      $('body').konamize({
+        callback: function() {
+          alert('callback');
+        }
+      });
+    });
+  </pre>
+
+  <h2>parameters</h2>
+  <ul>
+    <li>callback: the function to return</li>
+    <li>code: the code (default [38, 38, 40, 40, 37, 39, 37, 39, 66, 65])</li>
+    <li>timer: the timer limit (default: 5000)</li>
+  </ul>
+
+  <h2>license</h2>
+  <p>I don't care bro !</p>
+
   <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="konamize.js"></script>
   <script type="text/javascript">

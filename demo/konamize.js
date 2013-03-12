@@ -1,3 +1,10 @@
+
+/*
+ Made by Siegfried Ehret
+ Licenced under the WTFPL
+ */
+
+
 (function() {
 
   $.fn.konamize = function(settings) {
@@ -14,11 +21,9 @@
     progress = -1;
     timeOutFunction = function() {
       progress = -1;
-      clearTimeout(timeOut);
-      return console.log('cleared !');
+      return clearTimeout(timeOut);
     };
     return container.on('keydown', function(e) {
-      console.log(e.keyCode);
       if (!timeOut) {
         timeOut = setTimeout(timeOutFunction, options.timer);
       }
