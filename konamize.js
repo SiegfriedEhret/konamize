@@ -2,16 +2,14 @@
 // Licenced under the WTFPL
 
 {
-  const konamize = (settings) => {
-    const defaults = {
-      callback: () => {},
-      code: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
-      timer: 5000
-    };
+  const konamize = ({
+        callback = () => {},
+        code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+        timer = 5000
+      }) => {
     let timeOut = undefined;
     let progress = -1;
-    const options = Object.assign({}, defaults, settings);
-    options.codeLength = options.code.length - 1;
+    const codeLength = code.length - 1;
 
     const timeOutFunction = () => {
       progress = -1;
@@ -20,15 +18,15 @@
 
     document.addEventListener('keydown', (e) => {
       if (!timeOut) {
-        timeOut = setTimeout(timeOutFunction, options.timer);
+        timeOut = setTimeout(timeOutFunction, timer);
       }
 
       ++progress;
 
-      if (options.code[progress] != e.keyCode) {
+      if (code[progress] !== e.keyCode) {
         timeOutFunction();
-      } else if (progress == options.codeLength) {
-        options.callback();
+      } else if (progress === codeLength) {
+        callback();
         timeOutFunction();
       }
     });

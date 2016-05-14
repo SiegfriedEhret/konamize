@@ -1,19 +1,16 @@
 # konamize
 
 ## intro
-Easy jQuery konami code integration !
+Easy konami code integration !
 The function resets when the user type a bad key or when the timer reach its limit.
 
 ## how to
-* include jquery
-* include konamize
+* include konamize.js
 
 Then, call the stuff:
 <pre>
-$(function() {
-  $('body').konamize({
-    callback: function() { alert('callback'); }
-  });
+konamize({
+  callback: function() { alert('callback'); }
 });
 </pre>
 

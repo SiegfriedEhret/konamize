@@ -1,0 +1,22 @@
+{
+  "name": "konamize",
+  "version": "2.0.0",
+  "description": "A thing to made your konami code integration easier",
+  "main": "konamize.js",
+  "scripts": {
+    "test": "eslint konamize.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiegfriedEhret/konamize.git"
+  },
+  "keywords": [
+    "konami"
+  ],
+  "author": "Siegfried Ehret <siegfried@ehret.me>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/SiegfriedEhret/konamize/issues"
+  },
+  "homepage": "https://github.com/SiegfriedEhret/konamize#readme"
+}
