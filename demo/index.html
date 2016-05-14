@@ -14,19 +14,18 @@
 
   <h2>how to</h2>
   <ul>
-    <li>include jquery</li>
     <li>include konamize</li>
   </ul>
 
   <p>Then, call the stuff:</p>
   <pre>
-    $(function() {
-      $('body').konamize({
+    {
+      konamize({
         callback: function() {
           alert('callback');
         }
       });
-    });
+    };
   </pre>
 
   <h2>parameters</h2>
@@ -55,16 +54,23 @@
     0. You just DO WHAT THE FUCK YOU WANT TO.
   </pre>
 
-  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="konamize.js"></script>
   <script type="text/javascript">
-    $(function() {
-      $('body').konamize({
-        callback: function() {
-          $('<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>').appendTo($('#container'));
-        }
-      });
+  {
+    //$('<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>').appendTo($('#container'));
+    konamize({
+      callback: function() {
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('width', '420');
+        iframe.setAttribute('height', '315');
+        iframe.setAttribute('src', 'http://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1');
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allowfullscreen', 'allowfullscreen');
+        document.getElementById('container').appendChild(iframe);
+        alert('kikou');
+      }
     });
+  }
   </script>
 </body>
 </html>
