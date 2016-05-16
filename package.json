@@ -1,6 +1,6 @@
 {
   "name": "konamize",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A thing to made your konami code integration easier",
   "main": "konamize.js",
   "scripts": {
