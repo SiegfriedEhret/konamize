@@ -4,6 +4,8 @@
 Easy konami code integration !
 The function resets when the user type a bad key or when the timer reach its limit.
 
+[Click here for a demo !](https://dev.ehret.me/konamize/)
+
 ## how to
 * include konamize.js
 
